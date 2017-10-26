@@ -2,20 +2,24 @@
 function login(){
 let username= $("#username").val()
 let password= $("#password").val()
-ajax({
-    url: "../../../back/api/api.php",
-    type: 'GET',
-    data:{table:'admins',
+$.ajax({
+    url: "../../../backnd/API.php",
+    type: 'DELETE',
+    data:{action:'login',
           data:{name:username,
                 password:password}
         },
-    success: function(rol) {
-        switch(rol){
-              case super_admin:
-              alert("hello  super adminastrater")
-        }
-
+    success: function(mainContainer) {
+              
+      $("#loginbox").replaceWith(mainContainer);
+      
+              }
 })
+}
+function addAndUpdate(){
+       
+
+
 
 
 }
