@@ -3,8 +3,8 @@ function login(){
 let username= $("#username").val()
 let password= $("#password").val()
 $.ajax({
-    url: "../../../backnd/API.php",
-    type: 'DELETE',
+    url: "../../../backend/api/API.php",
+    type: 'GET',
     data:{action:'login',
           data:{name:username,
                 password:password}
